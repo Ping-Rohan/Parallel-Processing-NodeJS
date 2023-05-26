@@ -27,8 +27,9 @@ process.once("message", async (msg) => {
         },
         flush(cb) {
           if (last && parseAndVerify(last)) {
-            // send msg here
+            process.send(last);
           }
+          cb();
         },
       })
     )

@@ -25,7 +25,7 @@ function mergeStreams() {
 }
 
 // our final output will be stored here
-const outputFile = createWriteStream("./Database/output.ndjson");
+const outputFile = createWriteStream("./output.ndjson");
 
 // filtering only required files
 const inputFiles = (await readdir("./Database")).filter(
